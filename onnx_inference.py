@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from torchvision import transforms
 
-# Define the list of class labels
+
 class_labels = ['Glioma','Meningioma','No_Tumor','Pituitary']
 
 
@@ -15,7 +15,7 @@ def preprocess_image(image_path):
         transforms.Normalize(mean=[0.456, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
     input_tensor = preprocess(input_image)
-    input_batch = input_tensor.unsqueeze(0).numpy()  # Convert to numpy array
+    input_batch = input_tensor.unsqueeze(0).numpy()  
     return input_batch
 
 def infer_onnx_model(image_path, onnx_path):
@@ -28,8 +28,8 @@ def infer_onnx_model(image_path, onnx_path):
     return class_label
 
 if __name__ == '__main__':
-    image_path = 'data\\MRI_classification\\Testing\\notumor\\Te-no_0398.jpg'  # Replace with the path to your input image
-    onnx_path = 'Model\model.onnx'  # Path to your ONNX model
+    image_path = 'data\\MRI_classification\\Testing\\notumor\\Te-no_0398.jpg'  
+    onnx_path = 'Model\model.onnx' 
     class_label = infer_onnx_model(image_path, onnx_path)
     print(f'Predicted class: {class_label}')
     
