@@ -1,17 +1,4 @@
-# RESNET_BRAIN_TUMOR_CLASSIFICATION
 
-<div style="animation: slideIn 2s;">
-    <h2 style="color: red;">ResNet</h2>
-</div>
-
-<style>
-    
-@keyframes slideIn {
-    from {transform: translateX(-100%); opacity: 0;}
-    to {transform: translateX(0); opacity: 1;}
-    
-}
-</style>
 
 
 Implementation of [ResNet](https://arxiv.org/pdf/1512.03385) using pytorch.This project include the code for training and the deployment on HuggingFace spaces using gradio.
