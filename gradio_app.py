@@ -4,7 +4,7 @@ from gradio.themes import Glass
 
 
 def predict(image):
-    onnx_path = 'Model/model.onnx'  # Path to your ONNX model
+    onnx_path = 'Model/model.onnx' 
     class_label = infer_onnx_model(image, onnx_path)
     return class_label
 
