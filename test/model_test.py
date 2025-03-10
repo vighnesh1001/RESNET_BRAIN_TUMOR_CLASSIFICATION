@@ -2,12 +2,17 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from resnet import ResNet, Bottleneck 
+from datasets.datasets import *
+from model.model import *
+from training.train import *
+from test.test import *
+from utils.plot import *
 
 class_labels = ['Glioma','Meningioma','No_Tumor','Pituitary']
 
 
 def load_model(weights_path):
-    model = ResNet(Bottleneck, [3, 4, 6, 3])  # Adjust the architecture if needed
+    model = ResNet(Bottleneck, [3, 4, 6, 3]) 
     model.load_state_dict(torch.load(weights_path,weights_only=True))
     model.eval()
     return model
@@ -20,7 +25,7 @@ def preprocess_image(image_path):
         transforms.Normalize(mean=[0.456, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
     input_tensor = preprocess(input_image)
-    input_batch = input_tensor.unsqueeze(0)  # Create a mini-batch as expected by the model
+    input_batch = input_tensor.unsqueeze(0)  
     return input_batch
 
 
