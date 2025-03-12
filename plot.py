@@ -1,4 +1,4 @@
-from datasets.datasets import *
+from git_temp.RESNET_BRAIN_TUMOR_CLASSIFICATION.datasets import *
 import torchvision
 import torch
 def plotvalue(train_loss,train_acc,val_loss,val_acc):

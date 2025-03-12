@@ -1,8 +1,8 @@
 import torch
 from model.model import *
-from training.train import *
+from git_temp.RESNET_BRAIN_TUMOR_CLASSIFICATION.train import *
 from test.test import *
-from utils.plot import *
+from git_temp.RESNET_BRAIN_TUMOR_CLASSIFICATION.plot import *
 import torchvision
 def train(model, epochs, optimizer, criterion, scheduler, device, trainloader, valloader):
     train_loss = []
