@@ -25,14 +25,21 @@ Accuracy:0.9611
 Precision:0.9617
 Recall:0.9611
 F1 score:0.9607
+***
+***
+***
 
 
 
-## Per-Class Metrics 
-glioma: Precision=0.9897, Recall=0.9633, F1-Score=0.9764
-meningioma: Precision=0.9509, Recall=0.8856, F1-Score=0.9171
-notumor: Precision=0.9332, Recall=1.0000, F1-Score=0.9654
-pituitary: Precision=0.9833, Recall=0.9833, F1-Score=0.9833
+## Per-Class Metrics
+
+| Class      | Precision | Recall | F1-Score |
+|------------|------------|------------|------------|
+| Glioma      | 0.9897     | 0.9633  | 0.9764  |
+| Meningioma  | 0.9509     | 0.8856  | 0.9171  |
+| No Tumor    | 0.9332     | 1.0000  | 0.9654  |
+| Pituitary   | 0.9833     | 0.9833  | 0.9833  |
+
 
 
 ![Screenshot from 2025-03-11 20-42-30](https://github.com/user-attachments/assets/3cceaa05-b652-4574-bdb4-a78db753c643)
